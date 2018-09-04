@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UGUILocalizationDemo", "UGUILocalizationDemo.csproj", "{21919500-35B2-F95D-9E48-80B90B9671E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UGUILocalizationDemo.Editor", "UGUILocalizationDemo.Editor.csproj", "{216E41D7-89BB-8BB9-EAE8-F94BBB3B9C1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21919500-35B2-F95D-9E48-80B90B9671E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21919500-35B2-F95D-9E48-80B90B9671E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21919500-35B2-F95D-9E48-80B90B9671E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21919500-35B2-F95D-9E48-80B90B9671E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216E41D7-89BB-8BB9-EAE8-F94BBB3B9C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216E41D7-89BB-8BB9-EAE8-F94BBB3B9C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216E41D7-89BB-8BB9-EAE8-F94BBB3B9C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216E41D7-89BB-8BB9-EAE8-F94BBB3B9C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

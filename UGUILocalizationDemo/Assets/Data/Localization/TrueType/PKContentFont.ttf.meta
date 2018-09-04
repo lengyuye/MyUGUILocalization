@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 40f312c1c98d5794284855f7d9379809
+timeCreated: 1515123399
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PKContentFont
+  fontNames:
+  - PKContentFont
+  fallbackFontReferences: 
+  -
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
