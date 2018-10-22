@@ -1,2 +1,3 @@
 IDS_COMMON_CONFIRM = OK
 IDS_COMMON_CANCEL = Cancel
+IDS_COMMON_TEST = Test dynamic value:{0}

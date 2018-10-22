@@ -26,5 +26,9 @@ public class LocalizationTextEditor : UnityEditor.UI.TextEditor
         base.OnInspectorGUI();
         component.KeyString = EditorGUILayout.TextField("Key String", component.KeyString);
         component.CustomFont = (UIFont)EditorGUILayout.ObjectField("Custom Font", component.CustomFont, typeof(UIFont), true);
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("Is Open Localize",GUILayout.Width(140f));
+        component.IsOpenLocalize = EditorGUILayout.Toggle(component.IsOpenLocalize);
+        EditorGUILayout.EndHorizontal();
     }
 }

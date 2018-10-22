@@ -10,7 +10,6 @@ public class LocalizationText : Text
     protected override void Awake()
     {
         base.Awake();
-        LocalizationManager.InitValue(this);
         if(CustomFont!=null)
         {
             font = CustomFont.UseFont;
@@ -21,16 +20,22 @@ public class LocalizationText : Text
     protected override void OnEnable()
     {
         base.OnEnable();
-        LocalizationManager.OnLocalize += OnLocalize;  
+        if(IsOpenLocalize)
+        {
+            LocalizationManager.OnLocalize += OnLocalize;
+        }
+     
     }
     protected override void OnDisable()
     {
         base.OnDisable();
-        if (LocalizationManager.OnLocalize!=null)
+        if(IsOpenLocalize)
         {
-            LocalizationManager.OnLocalize -= OnLocalize;
+            if (LocalizationManager.OnLocalize != null)
+            {
+                LocalizationManager.OnLocalize -= OnLocalize;
+            }
         }
-     
     }
 
     /// <summary>
@@ -44,11 +49,19 @@ public class LocalizationText : Text
     public UIFont CustomFont;
 
     /// <summary>
+    /// 是否开启自身的本地化
+    /// </summary>
+    public bool IsOpenLocalize=true;
+
+    /// <summary>
     /// 重新本地化，用于游戏内切换语言时调用
     /// </summary>
     public void OnLocalize()
     {
-        text = Localization.Get(KeyString);
+        if(IsOpenLocalize)
+        {
+            text = Localization.Get(KeyString);
+        }
     }
 
     #region Override Part
@@ -56,8 +69,15 @@ public class LocalizationText : Text
     {
         get
         {
-            m_Text = Localization.Get(KeyString);
-            return m_Text;
+            if(IsOpenLocalize)
+            {
+                m_Text = Localization.Get(KeyString);
+                return m_Text;
+            }
+            else
+            {
+                return m_Text;
+            }
         }
         set
         {

@@ -644,7 +644,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 40f312c1c98d5794284855f7d9379809, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -656,16 +656,95 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: IDS_COMMON_CONFIRM
+  m_Text: OK
   KeyString: IDS_COMMON_CONFIRM
   CustomFont: {fileID: 114292825148946868, guid: 17deb6450cc97954d9d34d8c21406b0f,
     type: 2}
+  IsOpenLocalize: 1
 --- !u!222 &1443808679
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443808676}
+--- !u!1 &1549761449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1549761450}
+  - component: {fileID: 1549761452}
+  - component: {fileID: 1549761451}
+  m_Layer: 5
+  m_Name: DynamicText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1549761450
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549761449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1885447114}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 144.36}
+  m_SizeDelta: {x: 255.85, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1549761451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549761449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d5545bb88a89c40b1c695c6e040e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 40f312c1c98d5794284855f7d9379809, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u6D4B\u8BD5\u52A8\u6001\u8D4B\u503C:{0}"
+  KeyString: IDS_COMMON_TEST
+  CustomFont: {fileID: 114292825148946868, guid: 17deb6450cc97954d9d34d8c21406b0f,
+    type: 2}
+  IsOpenLocalize: 0
+--- !u!222 &1549761452
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549761449}
 --- !u!1 &1885447110
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +756,7 @@ GameObject:
   - component: {fileID: 1885447113}
   - component: {fileID: 1885447112}
   - component: {fileID: 1885447111}
+  - component: {fileID: 1885447115}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -754,6 +834,7 @@ RectTransform:
   - {fileID: 1443808677}
   - {fileID: 1277074706}
   - {fileID: 648628277}
+  - {fileID: 1549761450}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -762,6 +843,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1885447115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885447110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24c7897e5eb76b40bee645a237a1cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dynamicText: {fileID: 1549761451}
 --- !u!1 &1973045652
 GameObject:
   m_ObjectHideFlags: 0
